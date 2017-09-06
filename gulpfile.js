@@ -80,11 +80,11 @@ gulp.task('minify-js', function() {
         .pipe(gulp.dest('release/prod'));
 });
 
-// Minify the images on "dev" folder (PNG, JPG, JPEG, GIF and BMP)
+// Minify the images on "prod" folder (PNG, JPG, JPEG, GIF and BMP)
 gulp.task('minify-img', function() {
-    return gulp.src('app/**/*.+(png|jpg|jpeg|gif|bmp)')
+    return gulp.src('release/dev/**/*.+(png|jpg|jpeg|gif|bmp)')
         .pipe(imagemin())
-        .pipe(gulp.dest('release/dev'));
+        .pipe(gulp.dest('release/prod'));
 });
 
 
