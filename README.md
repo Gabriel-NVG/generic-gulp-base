@@ -44,7 +44,7 @@ The other tasks' purpose are just to allow them to be called separately.
 
 ## Gulp watches
 - If any file changes on the "app" folder, runs the "build-dev" task.
-- If any file changes on the "dev" folder, runs Browsersync using the "dev" folder as root directory.
+- If any file changes on the "dev" folder, reloads Browsersync server.
 - If any CSS or JS file changes on the "app" folder, a respective lint runs to checks their integrity and if fails, it stops the Browsersync server.
 
 ## Contribution

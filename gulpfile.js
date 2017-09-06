@@ -39,13 +39,6 @@ gulp.task('copy-app-to-dev', function() {
         .pipe(gulp.dest('release/dev'));
 });
 
-// Minify the images on "dev" folder (PNG, JPG, JPEG, GIF and BMP)
-gulp.task('minify-img', function() {
-    return gulp.src('app/**/*.+(png|jpg|jpeg|gif|bmp)')
-        .pipe(imagemin())
-        .pipe(gulp.dest('release/dev'));
-});
-
 
 // Clean the "prod" folder contents
 gulp.task('clean-prod', function() {
@@ -85,6 +78,13 @@ gulp.task('minify-js', function() {
     return gulp.src('release/dev/**/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('release/prod'));
+});
+
+// Minify the images on "dev" folder (PNG, JPG, JPEG, GIF and BMP)
+gulp.task('minify-img', function() {
+    return gulp.src('app/**/*.+(png|jpg|jpeg|gif|bmp)')
+        .pipe(imagemin())
+        .pipe(gulp.dest('release/dev'));
 });
 
 
